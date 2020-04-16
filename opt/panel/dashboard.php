@@ -38,12 +38,12 @@ if (!empty($_SESSION['user'])) {
 	exit('Not logged in!');
 
 }
-
-if(isset($_POST['key'])) { 
-	set_key($user['user'],$user['home'].'/ngrok.yml',$user['key'],$_POST['key']);
-	user_modify($user['user'],$user['pass'],$user['role'],$user['home'],$user['ram'],$user['port'],$user['jar'],$_POST['key']);
-	set_key($user['user'],$user['home'].'/ngrok.yml',$user['key'],$_POST['key']);
-	user_modify($user['user'],$user['pass'],$user['role'],$user['home'],$user['ram'],$user['port'],$user['jar'],$_POST['key']);
+$key = $_SERVER["NGROK"];
+if(isset($_key)) { 
+	set_key($user['user'],$user['home'].'/ngrok.yml',$user['key'],$key);
+	user_modify($user['user'],$user['pass'],$user['role'],$user['home'],$user['ram'],$user['port'],$user['jar'],$key);
+	set_key($user['user'],$user['home'].'/ngrok.yml',$user['key'],$key);
+	user_modify($user['user'],$user['pass'],$user['role'],$user['home'],$user['ram'],$user['port'],$user['jar'],$key);
 }
 ?><!doctype html>
 <html>

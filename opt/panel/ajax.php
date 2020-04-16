@@ -190,11 +190,11 @@ if(isset($_GET['timer_start'])) {
 user_modify($user['user'],$user['pass'],$user['role'],$user['home'],$user['ram'],$user['port'],$user['jar'],$user['key'],time());
 }
 
-if(isset($_POST['key'])) { 
-	set_key($user['user'],$user['home'].'/ngrok.yml',$user['key'],$_POST['key']);
-	user_modify($user['user'],$user['pass'],$user['role'],$user['home'],$user['ram'],$user['port'],$user['jar'],$_POST['key'],$user['active']);
-	set_key($user['user'],$user['home'].'/ngrok.yml',$user['key'],$_POST['key']);
-	user_modify($user['user'],$user['pass'],$user['role'],$user['home'],$user['ram'],$user['port'],$user['jar'],$_POST['key'],$user['active']);
+if(isset($key)) { 
+	set_key($user['user'],$user['home'].'/ngrok.yml',$user['key'],$key);
+	user_modify($user['user'],$user['pass'],$user['role'],$user['home'],$user['ram'],$user['port'],$user['jar'],$key,$user['active']);
+	set_key($user['user'],$user['home'].'/ngrok.yml',$user['key'],$key);
+	user_modify($user['user'],$user['pass'],$user['role'],$user['home'],$user['ram'],$user['port'],$user['jar'],$key,$user['active']);
 } 
 switch ($_POST['req']) {
 	case 'dir':

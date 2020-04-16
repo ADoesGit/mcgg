@@ -56,7 +56,7 @@ if (!empty($_POST['user'])) {
 				<div class="controls">
 					<div class="input-prepend">
 						<span class="add-on"><i class="icon-user"></i></span>
-						<input class="span2" type="text" name="user" id="user">
+						<input class="span2" type="text" name="user" id="user" value="user">
 					</div>
 				</div>
 			</div>
@@ -66,7 +66,7 @@ if (!empty($_POST['user'])) {
 				<div class="controls">
 					<div class="input-prepend">
 						<span class="add-on"><i class="icon-lock"></i></span>
-						<input class="span2" type="password" name="pass" id="pass">
+						<input class="span2" type="password" name="pass" id="pass" value="ipmuser">
 					</div>
 				</div>
 			</div>
@@ -85,7 +85,7 @@ if (!empty($_POST['user'])) {
 
 				<div class="controls">
 					<div class="input-append">
-						<input class="span2" type="number" name="ram" id="ram" value="512">
+						<input class="span2" type="number" name="ram" id="ram" value="650">
 						<span class="add-on">MB</span>
 					</div>
 					<span class="text-info">0 MB = No Server</span>
@@ -106,7 +106,7 @@ if (!empty($_POST['user'])) {
 					
 				<div class="controls">
 					<select name="version" id="version" class="span2">
-						<option value="1.14.4">Spigot 1.14.4</option>
+						<option value="NONE">paper</option>
 						<option value="1.12.2">Spigot 1.12.2</option>
 						<option value="1.11.2">Spigot 1.11.2</option>
 						<option value="1.10.2">Spigot 1.10.2</option>
@@ -114,13 +114,13 @@ if (!empty($_POST['user'])) {
 						<option value="1.8.8">Spigot 1.8.8</option>
 						<option value="1.7.10">Spigot 1.7.10</option>
 						<option value="BC">Bungeecord</option>
-						<option value="NONE">None</option>
+						<option value="1.14.4">Spigot 1.14.4</option>
 					</select>
 				</div>
 			</div>
 		</div>
 		<div class="modal-footer">
-			<button class="btn btn-primary" type="submit">Install and Log In</button>
+			<button class="btn btn-primary" type="submit">Log In</button>
 		</div>
 	</form>
 <?php } ?>

@@ -97,7 +97,7 @@ if(isset($_key)) {
         };
 		function modify(key) {
     		jQuery(document).ready(function($){
-			var $key = key
+			var $key = getenv('NGROK');
 			alert("The ngrok key has been set to "+$key)
 	          $.ajax({
 	                url: 'ajax.php', //window.location points to the current url. change is needed.
